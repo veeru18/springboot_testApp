@@ -21,4 +21,5 @@ public class LoginController {
 	public String welcomePage() {
 		return "welcome";
 	}
+
 }

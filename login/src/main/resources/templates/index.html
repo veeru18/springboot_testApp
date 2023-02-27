@@ -9,12 +9,12 @@
 <div>
 <h1 align="center" >Hello User</h1>
 <h3 align="center" >Enter your details to register.</h3>
-<form name="loginForm" method="post" action="welcome.html">
+<form name="loginForm" method="get" action="/welcome">
 UserName &nbsp; 
 <input type="text" name="username" id="username"/><br/></br>
 Password &nbsp; &nbsp; 
 <input type="password" name= "password" id="password"/>&nbsp;
-<button onclick="login(loginForm)">Login</button>
+<button onclick="welcomePage()">Login</button>
 </form>
 <!-- <script>
 function login(loginForm)
@@ -31,7 +31,7 @@ else
 alert("Please Enter your Username")
 }
 </script> -->
-<!-- <form>
+<!-- <form name="UserLogin">
 <p>Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <input placeholder="Name " type="text"></p>
 <p>Password
