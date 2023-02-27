@@ -1,43 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<meta name="keywords" content="Login,UserLoginApp">
 <title>UserLoginApp</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="Login,UserLoginApp">
 </head>
 <body>
 <div>
 <h1 align="center" >Hello User</h1>
 <h3 align="center" >Enter your details to register.</h3>
-<form name="loginForm" method="get" action="/welcome">
+<!-- <form name="loginForm" method="post" action="/welcome">
 UserName &nbsp; 
 <input type="text" name="username" id="username"/><br/></br>
 Password &nbsp; &nbsp; 
 <input type="password" name= "password" id="password"/>&nbsp;
 <button onclick="welcomePage()">Login</button>
-</form>
-<!-- <script>
-function login(loginForm)
-{
-if(loginForm.username.value && loginForm.password.value)
-{
-var username=document.getElementById("username").value;
-document.write('<html><body><h1><center>");
-document.write("Welcome" + " ");
-document.write (username);
-document.write('</center></h1></body></htm1>);
-}
-else
-alert("Please Enter your Username")
-}
-</script> -->
-<!-- <form name="UserLogin">
-<p>Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<input placeholder="Name " type="text"></p>
-<p>Password
-<input placeholder="Password " type="password"></p>
-<button type="submit">Submit</button>
 </form> -->
+<form name="UserLogin" action="#" th:action="@{/login}" 
+	th:object="${login}" method="post">
+<p>Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input placeholder="Name " type="text" th:field="*{name}" /></p>
+<p>Password
+<input placeholder="Password " type="password" th:field="*{password}" /></p>
+<p><input type="submit" value="Submit" /> 
+<input type="reset" value="Reset" /></p>
+</form>
 </div>
 </body>
 </html>
